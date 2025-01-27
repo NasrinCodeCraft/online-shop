@@ -120,7 +120,7 @@ const MobileMenu = styled(({ isOpen, ...props }) => <ul {...props} />)`
 `;
 
 
-const Navbar = () => {
+const Navbar = ({openAuth, setOpenAuth}) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
@@ -164,10 +164,12 @@ const Navbar = () => {
                     text="Sign Up"
                     outlined="true"
                     small = "true"
+                    onClick={() => setOpenAuth(!openAuth)}
                     />
                     <Button
                     text="Sign In"
                     small="true"
+                    onClick={() => setOpenAuth(!openAuth)}
                     />
                 </div>
             </MobileMenu>
@@ -181,7 +183,7 @@ const Navbar = () => {
                 <Navlink to="/cart">
                     <ShoppingCartOutlined sx={{color: "inherit", fontSize: "28px"}}/>
                 </Navlink>
-                <Button text="SignIn"/>
+                <Button text="SignIn" small="true" onClick={() => setOpenAuth(!openAuth)}/>
             </MobileIcon>
             <ButtonContainer>
                 <Navlink to="/search">
