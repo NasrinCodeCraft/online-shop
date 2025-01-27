@@ -66,7 +66,7 @@ const CloseButton = styled.div`
   }
 `;
 
-const Text = styled.p`
+const Text = styled.div`
   display: flex;
   gap: 12px;
   font-size: 16px;
