@@ -3,6 +3,7 @@ import { lightTheme } from "./utils/Themes";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import ShopListing from "./pages/ShopListing";
 import Authentication from "./pages/Authentication";
 import { useState } from "react";
 
@@ -26,6 +27,7 @@ function App() {
           <Navbar setOpenAuth={setOpenAuth}/>
           <Routes>
             <Route path="/" exact element={<Home />}/>
+            <Route path="/shop" exact element={<ShopListing />} />
           </Routes>
           {openAuth && <Authentication openAuth={openAuth} setOpenAuth={setOpenAuth}/>}
         </Container>

@@ -134,16 +134,16 @@ const Navbar = ({openAuth, setOpenAuth}) => {
             </NavLogo>
             <NavItems>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="">Shop</NavLink>
+                <NavLink to="/Shop">Shop</NavLink>
                 <NavLink to="">New Arrivals</NavLink>
                 <NavLink to="">Orders</NavLink>
                 <NavLink to="">Contact</NavLink>
             </NavItems>
             <MobileMenu isOpen={isOpen}>
                 <NavLink to="/" onClick={() => setIsOpen(!isOpen)}>Home</NavLink>
-                <Navlink onClick={() => setIsOpen(!isOpen)} to="">
-                    Shop
-                </Navlink>
+                <Navlink onClick={() => setIsOpen(!isOpen)} to="/Shop">
+              Shop
+            </Navlink>
                 <Navlink onClick={() => setIsOpen(!isOpen)} to="">
                     New Arrivals
                 </Navlink>
