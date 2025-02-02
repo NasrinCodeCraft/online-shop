@@ -8,6 +8,7 @@ import Authentication from "./pages/Authentication";
 import { useState } from "react";
 import  Favorite  from "./pages/favorite";
 import Cart from "./pages/Cart";
+import ProductDetails from "./pages/ProductDetails";
 
 
 const Container = styled.div`
@@ -32,6 +33,7 @@ function App() {
             <Route path="/shop" exact element={<ShopListing />} />
             <Route path="/favorite" exact element={<Favorite />} />
             <Route path="/cart" exact element={<Cart />} />
+            <Route path="/shop/:id" exact element={<ProductDetails />} />
           </Routes>
           {openAuth && <Authentication openAuth={openAuth} setOpenAuth={setOpenAuth}/>}
         </Container>
